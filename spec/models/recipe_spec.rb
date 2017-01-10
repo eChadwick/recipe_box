@@ -4,7 +4,7 @@ RSpec.describe Recipe, type: :model do
   let(:name) { 'name' }
   let(:directions) { '1. do something.  2. do something else.' }
 
-  context 'when required attributes are present' do
+  context 'when required attributes are ' do
     let(:model) { Recipe.new name: name, directions: directions }
 
     it 'is valid' do
@@ -20,7 +20,7 @@ RSpec.describe Recipe, type: :model do
     end
 
     it 'adds an error to the model' do
-      model.save
+      model.valid?
       expect(model.errors[:name]).to include('Recipe name is required')
     end
   end
@@ -33,7 +33,7 @@ RSpec.describe Recipe, type: :model do
     end
 
     it 'adds an error to the model' do
-      model.save
+      model.valid?
       expect(model.errors[:directions]).to include('Recipe directions are required')
     end
   end
@@ -51,7 +51,7 @@ RSpec.describe Recipe, type: :model do
     end
 
     it 'adds an error to the model' do
-      model2.save
+      model2.valid?
       expect(model2.errors[:name]).to include('Recipe name is already in use')
     end
   end
