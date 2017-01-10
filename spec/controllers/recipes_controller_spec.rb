@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe RecipesController, type: :controller do
 
   describe '#index' do
-    let(:recipes_list) {
+    let(:recipes_list) do
       [
         Recipe.new(name: 'test1', directions: 'do stuff.'),
         Recipe.new(name: 'test2', directions: 'thing 1.  thing2')
       ]
-    }
+    end
 
     before do
       allow(Recipe).to receive(:all).and_return(recipes_list)

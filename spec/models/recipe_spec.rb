@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-  # let(:model) {Recipe.new name: name, directions: directions}
   let(:name) { 'name' }
   let(:directions) {'1. do something.  2. do something else.'}
 
@@ -43,9 +42,17 @@ RSpec.describe Recipe, type: :model do
     let(:model1) {Recipe.new name: name, directions: directions}
     let(:model2) {Recipe.new name: name, directions: directions}
 
-    it 'in invalid' do
+    before do
       model1.save
+    end
+
+    it 'is invalid' do
       expect(model2.valid?).to eq false
+    end
+
+    it 'adds an error to the model' do
+      model2.save
+      expect(model2.errors[:name]).to include('Recipe name is already in use')
     end
   end
 end
