@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
   let(:name) { 'name' }
-  let(:directions) {'1. do something.  2. do something else.'}
+  let(:directions) { '1. do something.  2. do something else.' }
 
   context 'when required attributes are present' do
-    let(:model) {Recipe.new name: name, directions: directions}
+    let(:model) { Recipe.new name: name, directions: directions }
 
     it 'is valid' do
       expect(model.valid?).to be true
@@ -13,7 +13,7 @@ RSpec.describe Recipe, type: :model do
   end
 
   context 'when name is missing' do
-    let(:model) {Recipe.new directions: directions}
+    let(:model) { Recipe.new directions: directions }
 
     it 'is invalid' do
       expect(model.valid?).to be false
@@ -26,7 +26,7 @@ RSpec.describe Recipe, type: :model do
   end
 
   context 'when directions are missing' do
-    let(:model) {Recipe.new name: name}
+    let(:model) { Recipe.new name: name }
 
     it 'is invalid' do
       expect(model.valid?).to be false
@@ -39,8 +39,8 @@ RSpec.describe Recipe, type: :model do
   end
 
   context 'when name in already in use' do
-    let(:model1) {Recipe.new name: name, directions: directions}
-    let(:model2) {Recipe.new name: name, directions: directions}
+    let(:model1) { Recipe.new name: name, directions: directions }
+    let(:model2) { Recipe.new name: name, directions: directions }
 
     before do
       model1.save

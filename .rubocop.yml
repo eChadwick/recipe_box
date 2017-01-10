@@ -1,1 +1,19 @@
-inherit_from: .rubocop_todo.yml
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+    - lib/**/*.rake
+  Exclude:
+    - db/schema.rb
+
+# Document classes and non-namespace modules.
+Documentation:
+  Enabled: false
+
+# Don't use assignment in conditions.
+AssignmentInCondition:
+  Enabled: false
+
+# Maximum line length of 120 chars
+LineLength:
+  Max: 120
