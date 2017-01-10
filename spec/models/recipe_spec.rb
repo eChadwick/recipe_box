@@ -19,6 +19,11 @@ RSpec.describe Recipe, type: :model do
     it 'is invalid' do
       expect(model.valid?).to be false
     end
+
+    it 'adds an error to the model' do
+      model.save
+      expect(model.errors[:name]).to include('Recipe name is required')
+    end
   end
 
   context 'when directions are missing' do
@@ -26,6 +31,21 @@ RSpec.describe Recipe, type: :model do
 
     it 'is invalid' do
       expect(model.valid?).to be false
+    end
+
+    it 'adds an error to the model' do
+      model.save
+      expect(model.errors[:directions]).to include('Recipe directions are required')
+    end
+  end
+
+  context 'when name in already in use' do
+    let(:model1) {Recipe.new name: name, directions: directions}
+    let(:model2) {Recipe.new name: name, directions: directions}
+
+    it 'in invalid' do
+      model1.save
+      expect(model2.valid?).to eq false
     end
   end
 end
