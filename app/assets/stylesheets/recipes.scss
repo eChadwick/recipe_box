@@ -1,3 +1,47 @@
 // Place all the styles related to the Recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  height: 100%;
+}
+
+body {
+  background: dark-blue;
+  background: url("Butcher-Block.jpg");
+  height: 100%;
+  overflow: hidden;
+}
+
+.card {
+  background: #fffef2;
+  position: relative;
+  height: 80%;
+  width: 90%;
+  margin: 5%;
+  overflow: hidden;
+}
+
+.ingredients{
+  height: 100%;
+  width: 30%;
+  float: left;
+}
+
+.directions{
+  height: 100%;
+  width: 70%;
+  float: right;
+}
+
+.title{
+  text-align: center;
+  font-size: 300%;
+  font-weight: bold;
+  border-bottom: thin solid black
+}
+
+.col_header{
+  font-size: 150%;
+  font-style: italic;
+}

@@ -1,0 +1,13 @@
+.card
+  .title=@recipe.name
+  .ingredients
+    .col_header Ingredients
+    -@recipe.recipe_ingredients.each do |ingredient|
+      %tr
+        %td= ingredient.name
+        %td= ingredient.measurement
+
+  .directions
+    .col_header Directions
+    %br
+    =@recipe.directions
