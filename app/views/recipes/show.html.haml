@@ -2,10 +2,11 @@
   .title=@recipe.name
   .ingredients
     .col_header Ingredients
-    -@recipe.recipe_ingredients.each do |ingredient|
+    %br
+    -@recipe_ingredients.each do |recipe_ingredient|
       %tr
-        %td= ingredient.name
-        %td= ingredient.measurement
+        %td=Ingredient.find(recipe_ingredient.ingredient_id).name
+        %td=recipe_ingredient.measurement
 
   .directions
     .col_header Directions

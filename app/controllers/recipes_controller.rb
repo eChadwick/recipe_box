@@ -5,7 +5,6 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    require 'pry'
-    binding.pry
+    @recipe_ingredients = @recipe.recipe_ingredients
   end
 end
