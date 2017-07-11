@@ -1,4 +1,6 @@
-- @recipes.each do |recipe|
-  %h1= recipe.name
-  %p= recipe.directions
+.card.recipe_list  
+  .title='Recipe List'
+  - @recipes.each do |recipe|
+    %h1= recipe.name
+    %p= recipe.directions
 

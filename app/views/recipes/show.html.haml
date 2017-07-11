@@ -1,14 +1,14 @@
-.card
+.card.recipe_card
   .title=@recipe.name
-  .ingredients
-    .col_header Ingredients
+  .ingredients_pane
+    .col_header.ingredients_header Ingredients
     %br
-    -@recipe_ingredients.each do |recipe_ingredient|
-      %tr
-        %td=Ingredient.find(recipe_ingredient.ingredient_id).name
-        %td=recipe_ingredient.measurement
+    -@recipe.recipe_ingredients.each do |recipe_ingredient|
+      .ingredient_name=recipe_ingredient.ingredient.name
+      .ingredient_measure=recipe_ingredient.measurement
+      %br
 
-  .directions
-    .col_header Directions
+  .directions_pane
+    .col_header.directions_header Directions
     %br
-    =@recipe.directions
+    .directions=@recipe.directions
