@@ -1,14 +1,18 @@
 .card.recipe_card
-  .title=@recipe.name
-  .ingredients_pane
-    .col_header.ingredients_header Ingredients
-    %br
-    -@recipe.recipe_ingredients.each do |recipe_ingredient|
-      .ingredient_name=recipe_ingredient.ingredient.name
-      .ingredient_measure=recipe_ingredient.measurement
-      %br
-
-  .directions_pane
-    .col_header.directions_header Directions
-    %br
-    .directions=@recipe.directions
+  .title
+    =@recipe.name
+    =link_to('[delete]', "/recipe/#{@recipe.id}", {method: :delete, class: 'delete_button'})
+  .body
+    .ingredients_pane
+      %table
+        %th.col_header
+          Ingredients
+        %tb
+        -@recipe.recipe_ingredients.each do |recipe_ingredient|
+          %tr
+            %td=recipe_ingredient.ingredient.name
+            %td=recipe_ingredient.measurement
+    .directions_pane
+      .col_header Directions
+      =@recipe.directions
+.recipe_list_button=link_to('<-- Back to List', "/recipes")

@@ -13,3 +13,53 @@
  *= require_tree .
  *= require_self
  */
+
+
+html {
+  height: 100%;
+}
+
+body {
+  background: dark-blue;
+  background: url("Butcher-Block.jpg");
+  height: 100%;
+  overflow: hidden;
+}
+
+.card {
+  background: #fffef2;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  font-size: 300%;
+  font-weight: bold;
+  border-bottom: thin solid black;
+  margin-bottom: 10px;
+}
+
+.body {
+  position: relative;
+  height: 100%;
+}
+
+.col_header {
+  font-size: 150%;
+  font-style: italic;
+  text-align: left;
+  padding-bottom: 20px;
+  font-weight: normal;
+} 
+
+.delete_button {
+  font-size: 30%;
+}
+
+table th {
+  padding-bottom: 5%;
+}
+
+a, a:visited {
+  text-decoration: none;
+}

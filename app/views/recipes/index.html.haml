@@ -1,6 +1,9 @@
-.card.recipe_list  
+.card.recipe_list
   .title='Recipe List'
-  - @recipes.each do |recipe|
-    %h1= recipe.name
-    %p= recipe.directions
-
+  .body
+    %table
+      -@recipes.each do |recipe|
+        %tr
+          %td.recipe_name
+            =link_to(recipe.name,"/recipe/#{recipe.id}")
+            =link_to('[delete]', "/recipe/#{recipe.id}", {method: :delete, class: 'delete_button'})
