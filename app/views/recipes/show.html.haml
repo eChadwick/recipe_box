@@ -14,5 +14,5 @@
             %td=recipe_ingredient.measurement
     .directions_pane
       .col_header Directions
-      =@recipe.directions
+      =simple_format(@recipe.directions)
 .recipe_list_button=link_to('<-- Back to List', "/recipes")
