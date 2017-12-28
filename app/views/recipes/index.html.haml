@@ -6,4 +6,4 @@
         %tr
           %td.recipe_name
             =link_to(recipe.name,"/recipe/#{recipe.id}")
-            =link_to('[delete]', "/recipe/#{recipe.id}", {method: :delete, class: 'delete_button'})
+            =link_to image_tag("Delete-Button-2.jpeg"), "/recipe/#{recipe.id}", {method: :delete, class: 'delete_button'}

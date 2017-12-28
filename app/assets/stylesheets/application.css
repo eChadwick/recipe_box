@@ -37,6 +37,9 @@ body {
   font-weight: bold;
   border-bottom: thin solid black;
   margin-bottom: 10px;
+  width: 100%;
+  background: #fffef2;
+  border-left: none;
 }
 
 .body {
@@ -50,11 +53,19 @@ body {
   text-align: left;
   padding-bottom: 20px;
   font-weight: normal;
-} 
+}
 
 .delete_button {
   font-size: 30%;
+  float: right;
 }
+
+.delete_button img {
+  width: 20%;
+  height: auto;
+  padding-top: 2%;
+}
+
 
 table th {
   padding-bottom: 5%;

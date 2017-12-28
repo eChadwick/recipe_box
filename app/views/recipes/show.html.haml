@@ -1,11 +1,11 @@
 .card.recipe_card
   .title
     =@recipe.name
-    =link_to('[delete]', "/recipe/#{@recipe.id}", {method: :delete, class: 'delete_button'})
+    =link_to image_tag("Delete-Button-2.jpeg"), "/recipe/#{@recipe.id}", {method: :delete, class: 'delete_button'}
   .body
     .ingredients_pane
       %table
-        %th.col_header
+        .col_header
           Ingredients
         %tb
         -@recipe.recipe_ingredients.each do |recipe_ingredient|
