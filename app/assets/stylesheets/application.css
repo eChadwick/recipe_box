@@ -61,4 +61,5 @@ table th {
 
 a, a:visited {
   text-decoration: none;
+  margin-left: 0;
 }

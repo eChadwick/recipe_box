@@ -74,9 +74,20 @@
   font-weight: bold;
   font-color: dark-grey;
   font-size: 200%;
-  padding-bottom: 20px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.recipe_name a {
+  padding-left: 2%;
 }
 
 table {
-  padding-left: 1%;
+  width: 100%;
 }
+
+tr:nth-child(even){
+  /*background-color: #fff1d3*/
+  background-color: #f4e3be;
+}
+
