@@ -55,18 +55,6 @@ body {
   font-weight: normal;
 }
 
-.delete_button {
-  font-size: 30%;
-  float: right;
-}
-
-.delete_button img {
-  width: 20%;
-  height: auto;
-  padding-top: 2%;
-}
-
-
 table th {
   padding-bottom: 5%;
 }

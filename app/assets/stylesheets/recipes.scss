@@ -44,6 +44,30 @@
   color: #3d3d3d;
 }
 
+.delete_button {
+  float: right;
+}
+
+.delete_button img {
+  width: 20%;
+  height: auto;
+  padding-top: 2%;
+  padding-right: 2%;
+  float: right;
+}
+
+.back_button {
+  float: left;
+}
+
+.back_button img {
+  width: 20%;
+  height: auto;
+  padding-top: 2%;
+  padding-left: 2%;
+  float: left;
+}
+
 /* Styles for Recipe List */
 
 .recipe_name {
