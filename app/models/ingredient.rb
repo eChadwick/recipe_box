@@ -1,7 +1,10 @@
 class Ingredient < ActiveRecord::Base
-  validates :name, presence: { message: 'Ingredient name is required' }
-  validates :name, uniqueness: { message: 'Ingredient with that name already exists' }
-
   has_many :recipe_ingredients
   has_many :recipes, through: :recipe_ingredients
+
+  def save
+    self.name = self.name.capitalize
+    super unless Ingredient.find_by(name: self.name)
+  end
+
 end

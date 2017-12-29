@@ -1,8 +1,8 @@
 .card.recipe_card
   .title
-    =link_to image_tag("Back-Button.jpeg", width: '15'), "/recipes", {method: :get, class: 'back_button'}
+    =link_to image_tag("Back-Button.png"), "/recipes", {method: :get, class: 'back_button'}
     =@recipe.name
-    =link_to image_tag("Delete-Button-2.jpeg"), "/recipe/#{@recipe.id}", {method: :delete, class: 'delete_button'}
+    =link_to image_tag("delete-button.png"), "/recipe/#{@recipe.id}", {method: :delete, class: 'delete_button'}
   .body
     .ingredients_pane
       %table

@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Styles for Recipe show */
+
 .recipe_card {
   height: 80%;
   width: 90%;
@@ -11,27 +13,19 @@
   position: absolute;
 }
 
-.recipe_list {
-  height: 100%;
-  width: 60%;
-  margin-left: 20%;
-}
-
-/* Styles for Recipe show */
-
 .ingredients_pane {
   position: relative;
   height: 100%;
   width: 29%;
   float: left;
   display: inline;
-  padding-left: 1%;
+  padding-left: 3%;
 }
 
 .directions_pane {
   position: relative;
   height: 100%;
-  width: 70%;
+  width: 60%;
   float: right;
   display: inline;
 }
@@ -44,31 +38,51 @@
   color: #3d3d3d;
 }
 
-.delete_button {
+ .recipe_card .delete_button {
   float: right;
 }
 
-.delete_button img {
-  width: 20%;
+
+.recipe_card .delete_button img {
+  width: 28%;
   height: auto;
-  padding-top: 2%;
+  padding-top: 3%;
   padding-right: 2%;
   float: right;
 }
 
-.back_button {
+.recipe_card .back_button {
   float: left;
 }
 
-.back_button img {
-  width: 20%;
+.recipe_card .back_button img {
+  width: 28%;
   height: auto;
-  padding-top: 2%;
+  padding-top: 3%;
   padding-left: 2%;
   float: left;
 }
 
 /* Styles for Recipe List */
+
+.recipe_list {
+  height: 100%;
+  width: 60%;
+  margin-left: 20%;
+  position: absolute;
+}
+
+.recipe_list .delete_button {
+  float: right;
+}
+
+.recipe_list .delete_button img {
+  width: 20%;
+  height: auto;
+  padding-top: 1%;
+  padding-right: 2%;
+  float: right;
+}
 
 .recipe_name {
   font-weight: bold;
@@ -87,7 +101,8 @@ table {
 }
 
 tr:nth-child(even){
-  /*background-color: #fff1d3*/
-  background-color: #f4e3be;
+  background-color: #ede2cb;
 }
+
+/* Styles for Recipe Create */
 

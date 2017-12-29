@@ -10,9 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
 
 
 html {
@@ -24,7 +25,6 @@ body {
   background: url("Butcher-Block.jpg");
   height: 100%;
   overflow: hidden;
-  font-family: 'Indie Flower', cursive;
 }
 
 .card {
@@ -32,7 +32,6 @@ body {
   position: relative;
   box-shadow: 5px 5px 10px;
   border-left: 2px solid black;
-  border-top: 1px solid black;
 }
 
 .title {
@@ -40,7 +39,7 @@ body {
   font-size: 300%;
   font-weight: bold;
   border-bottom: thin solid black;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   width: 100%;
   background: #fffef2;
   border-left: none;
@@ -63,12 +62,7 @@ table th {
   padding-bottom: 5%;
 }
 
-a {
+a, a:visited {
   text-decoration: none;
   margin-left: 0;
-  color: black
-}
-
-a:hover {
-  color: grey;
 }

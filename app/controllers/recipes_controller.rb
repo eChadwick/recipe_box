@@ -16,4 +16,11 @@ class RecipesController < ApplicationController
   def create
     @new_recipe = Recipe.new
   end
+
+  def new
+    @new_recipe = Recipe.new
+
+    params[:recipe_ingredients].each do |r|
+      Ingredient.new(name: r.ingredient)
+  end
 end

@@ -5,12 +5,17 @@
       %table
         .col_header
           Ingredients
-          %tb
-            =recipe.fields_for :recipe_ingredients do |recipe_ingredient|
-              %tr
-              =recipe_ingredient.text_field :measurement,  placeholder: 'Ingredient'
-
-
-    / .directions_pane
-    /   .col_header Directions
+        %tb
+          =fields_for(:recipe_ingredient) do |ingredient|
+            %td
+              =ingredient.text_field :ingredient, placeholder: 'Ingredient'
+              =ingredient.text_field :measurement, placeholder: 'Measurement'
+          =fields_for(:recipe_ingredient) do |ingredient|
+            %td
+              =ingredient.text_field :ingredient, placeholder: 'Ingredient'
+              =ingredient.text_field :measurement, placeholder: 'Measurement'
+    .directions_pane
+      .col_header Directions
+      =recipe.text_area :directions, placeholder: 'Directions'
+    =recipe.submit
 

@@ -1,0 +1,113 @@
+/* Styles for Recipe show */
+/* line 8, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_card {
+  height: 80%;
+  width: 90%;
+  margin: 5%;
+  margin-bottom: 0%;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* line 17, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.ingredients_pane {
+  position: relative;
+  height: 100%;
+  width: 29%;
+  float: left;
+  display: inline;
+  padding-left: 1%;
+}
+
+/* line 26, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.directions_pane {
+  position: relative;
+  height: 100%;
+  width: 70%;
+  float: right;
+  display: inline;
+}
+
+/* line 34, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_list_button a {
+  font-size: 300%;
+  float: right;
+  padding-right: 5%;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+/* line 42, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_card .delete_button {
+  float: right;
+}
+
+/* line 46, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_card .delete_button img {
+  width: 20%;
+  height: auto;
+  padding-top: 2%;
+  padding-right: 2%;
+  float: right;
+}
+
+/* line 54, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_card .back_button {
+  float: left;
+}
+
+/* line 58, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_card .back_button img {
+  width: 20%;
+  height: auto;
+  padding-top: 2%;
+  padding-left: 2%;
+  float: left;
+}
+
+/* Styles for Recipe List */
+/* line 68, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_list {
+  height: 100%;
+  width: 60%;
+  margin-left: 20%;
+  position: absolute;
+}
+
+/* line 75, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_list .delete_button {
+  float: right;
+}
+
+/* line 79, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_list .delete_button img {
+  width: 20%;
+  height: auto;
+  padding-top: 2%;
+  padding-right: 2%;
+  float: right;
+}
+
+/* line 87, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_name {
+  font-weight: bold;
+  font-color: dark-grey;
+  font-size: 200%;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+/* line 95, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+.recipe_name a {
+  padding-left: 2%;
+}
+
+/* line 99, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+table {
+  width: 100%;
+}
+
+/* line 103, /Users/ec048629/My_repos/recipe_box/app/assets/stylesheets/recipes.scss */
+tr:nth-child(even) {
+  background-color: #f4e3be;
+}
