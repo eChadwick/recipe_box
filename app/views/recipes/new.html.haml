@@ -1,18 +1,12 @@
 .card.recipe_card
-  =form_for(:recipe) do |recipe|
+  =form_for(@new_recipe) do |recipe|
     =recipe.text_field :name, placeholder: 'Recipe Name', class: 'title'
     .ingredients_pane
       %table
         .col_header
           Ingredients
         %tb
-          =recipe.fields_for(:recipe_ingredient) do |r|
-            %tr
-              %td=r.text_field :ingredient, placeholder: 'Ingredient'
-              %td=r.text_field :measurement, placeholder: 'Measurement'
-            %tr
-              %td=r.text_field :ingredient, placeholder: 'Ingredient'
-              %td=r.text_field :measurement, placeholder: 'Measurement'
+          =render 'new_ingredient', recipe: recipe
     .directions_pane
       .col_header Directions
       =recipe.text_area :directions, placeholder: 'Directions'
