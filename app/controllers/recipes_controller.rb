@@ -13,14 +13,15 @@ class RecipesController < ApplicationController
     redirect_to '/recipes'
   end
 
-  def create
+  def new
     @new_recipe = Recipe.new
   end
 
-  def new
-    @new_recipe = Recipe.new
-
+  def create
+    require 'pry'
+    binding.pry
     params[:recipe_ingredients].each do |r|
       Ingredient.new(name: r.ingredient)
+    end
   end
 end
