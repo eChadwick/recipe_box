@@ -100,9 +100,14 @@ table {
   width: 100%;
 }
 
-tr:nth-child(even){
+.recipe_list tr:nth-child(even){
   background-color: #ede2cb;
 }
 
 /* Styles for Recipe Create */
 
+.add_button {
+  width: 5%;
+  height: auto;
+  padding-left: 10px;
+}

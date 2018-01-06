@@ -1,3 +1,4 @@
+=javascript_include_tag 'add_ingredient'
 .card.recipe_card
   =form_for(@new_recipe) do |recipe|
     =recipe.text_field :name, placeholder: 'Recipe Name', class: 'title'
@@ -5,8 +6,8 @@
       %table
         .col_header
           Ingredients
-        %tb
-          =render 'new_ingredient', recipe: recipe
+          =link_to image_tag('add_button.png', class: 'add_button', onclick: 'javascript:addIngredient(); return false;')
+        %tb{id: 'ingredients_list'}
     .directions_pane
       .col_header Directions
       =recipe.text_area :directions, placeholder: 'Directions'

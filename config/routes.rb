@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/recipe/:id' => 'recipes#show'
   delete '/recipe/:id' => 'recipes#delete'
   get 'recipes/new' => 'recipes#new'
-  post 'recipes/new' => 'recipes#create'
+  post 'recipes' => 'recipes#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

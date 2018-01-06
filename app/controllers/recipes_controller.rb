@@ -20,8 +20,13 @@ class RecipesController < ApplicationController
   def create
     require 'pry'
     binding.pry
-    params[:recipe_ingredients].each do |r|
-      Ingredient.new(name: r.ingredient)
-    end
+    @new_recipe = Recipe.new(recipe_params)
+    @new_recipe.save
   end
+
+  private
+
+    def recipe_params
+      params.require(:recipe).permit!
+    end
 end
