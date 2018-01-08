@@ -18,10 +18,14 @@ class RecipesController < ApplicationController
   end
 
   def create
-    require 'pry'
-    binding.pry
-    @new_recipe = Recipe.new(recipe_params)
-    @new_recipe.save
+    @new_recipe = Recipe.create(recipe_params)
+    if(params[:recipe_ingredients])
+      params[:recipe_ingredients].values.each do |ri|
+        @ingredient = Ingredient.create(name: ri['ingredient'])
+        @new_recipe.recipe_ingredients.build(ingredient: @ingredient, measurement: ri['measurement'])
+      end
+    end
+    redirect_to "/recipe/#{@new_recipe.id}" unless !@new_recipe.save
   end
 
   private

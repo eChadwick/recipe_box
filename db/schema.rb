@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20170117155834) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "name",                 null: false
-    t.text     "directions",           null: false
+    t.text     "directions"
     t.string   "origin"
     t.integer  "recipe_ingredient_id"
     t.datetime "created_at",           null: false

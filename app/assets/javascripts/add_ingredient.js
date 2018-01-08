@@ -3,11 +3,11 @@ function addIngredient(){
 
   var ingredient = document.createElement("input");
   ingredient.placeholder = "Ingredient";
-  ingredient.name = "recipe[recipe_ingredients][" + id + "][ingredient]";
+  ingredient.name = "[recipe_ingredients][" + id + "][ingredient]";
 
   var measurement = document.createElement("input");
   measurement.placeholder = "Measurement";
-  measurement.name = "recipe[recipe_ingredients][" + id + "][measurement]";
+  measurement.name = "[recipe_ingredients][" + id + "][measurement]";
 
   var td = document.createElement("td");
   td.appendChild(ingredient);
