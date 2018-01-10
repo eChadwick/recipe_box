@@ -27,6 +27,11 @@ body {
   font-family: 'Indie Flower', cursive;
 }
 
+input {
+  background: #fffef2;
+  border: none;
+}
+
 .card {
   background: #fffef2;
   position: relative;
@@ -44,6 +49,7 @@ body {
   width: 100%;
   background: #fffef2;
   border-left: none;
+  position: relative;
 }
 
 .body {
