@@ -5,7 +5,6 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @recipe.directions = @recipe.directions
   end
 
   def delete
@@ -18,9 +17,11 @@ class RecipesController < ApplicationController
   end
 
   def create
+    require 'pry'
+    binding.pry
     @new_recipe = Recipe.create(recipe_params)
     if(params[:recipe_ingredients])
-      params[:recipe_ingredients].values.each do |ri|
+      params[:recipe_ingredients].each do |ri|
         @ingredient = Ingredient.create(name: ri['ingredient'])
         @new_recipe.recipe_ingredients.build(ingredient: @ingredient, measurement: ri['measurement'])
       end

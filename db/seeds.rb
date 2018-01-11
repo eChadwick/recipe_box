@@ -6,9 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Recipe.create(name: 'Ice Water', directions: 'Place water in glass.<br>Add ice to water<br/>Stir if desired')
-Recipe.create(name: 'Buttered Toast', directions: 'Make toast according to directions on toaster<br/>
-  Spread butter on toast')
+Recipe.create(name: 'Ice Water', directions: ['Place water in glass.', 'Add ice to water', 'Stir if desired'])
+Recipe.create(name: 'Buttered Toast', directions: ['Make toast according to directions on toaster','Spread butter on toast'])
 
 Ingredient.create([{name: 'Water'}, {name: 'Toast'}, {name: 'Ice'}, {name: 'Butter'}])
 

@@ -11,4 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( add_ingredient.js )
-Rails.application.config.assets.precompile += %w( remove_ingredient.js )
+Rails.application.config.assets.precompile += %w( add_direction.js )

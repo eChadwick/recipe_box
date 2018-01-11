@@ -15,4 +15,6 @@
             %td=recipe_ingredient.measurement
     .directions_pane
       .col_header Directions
-      =simple_format(@recipe.directions)
+      %ul
+      -@recipe.directions.each do |direction|
+        %li=direction

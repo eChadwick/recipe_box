@@ -1,5 +1,5 @@
 =javascript_include_tag 'add_ingredient'
-=javascript_include_tag 'remove_ingredient'
+=javascript_include_tag 'add_direction'
 .card.recipe_card
   =form_for(@new_recipe) do |recipe|
     =recipe.text_field :name, placeholder: 'Recipe Name', class: 'title'
@@ -10,6 +10,10 @@
           =link_to image_tag('add_button.png', class: 'add_button', onclick: 'javascript:addIngredient(); return false;')
         %tb{id: 'ingredients_list'}
     .directions_pane
-      .col_header Directions
-      =recipe.text_area :directions, placeholder: 'Directions'
+      %table
+        .col_header
+          Directions
+          =link_to image_tag('add_button.png', class: 'add_button', onclick: 'javascript:addDirection(); return false;')
+        %tb{id: 'directions_list'}
+
     =recipe.submit

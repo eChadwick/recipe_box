@@ -3,11 +3,11 @@ function addIngredient(){
 
   var ingredient = document.createElement("input");
   ingredient.placeholder = "Ingredient";
-  ingredient.name = "[recipe_ingredients][" + id + "][ingredient]";
+  ingredient.name = "[recipe_ingredients][][ingredient]";
 
   var measurement = document.createElement("input");
   measurement.placeholder = "Measurement";
-  measurement.name = "[recipe_ingredients][" + id + "][measurement]";
+  measurement.name = "[recipe_ingredients][][measurement]";
 
   var remove_button = document.createElement("img");
   remove_button.src = "/assets/remove-button.png";
