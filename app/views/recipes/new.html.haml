@@ -2,18 +2,20 @@
 =javascript_include_tag 'add_direction'
 .card.recipe_card
   =form_for(@new_recipe) do |recipe|
-    =recipe.text_field :name, placeholder: 'Recipe Name', class: 'title'
-    .ingredients_pane
-      %table
-        .col_header
-          Ingredients
-          =link_to image_tag('add_button.png', class: 'add_button', onclick: 'javascript:addIngredient(); return false;')
-        %tb{id: 'ingredients_list'}
-    .directions_pane
-      %table
-        .col_header
-          Directions
-          =link_to image_tag('add_button.png', class: 'add_button', onclick: 'javascript:addDirection(); return false;')
-        %tb{id: 'directions_list'}
-
-    =recipe.submit
+    .title
+      =link_to image_tag('Back-Button.png'), '/recipes', {method: :get, class: 'circular_nav_button'}
+      =link_to image_tag('save-button.png'), '', class: 'square_nav_button', onclick: "document.getElementById('new_recipe').submit()"
+      =recipe.text_field :name, placeholder: 'Recipe Name', class: 'new_recipe_name', autocomplete: 'off'
+    .body
+      .ingredients_pane
+        %table
+          .col_header
+            Ingredients
+            =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addIngredient(); return false;')
+          %tb{id: 'ingredients_list'}
+      .directions_pane
+        %table
+          .col_header
+            Directions
+            =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addDirection(); return false;')
+          %tb{id: 'directions_list'}

@@ -17,8 +17,6 @@ class RecipesController < ApplicationController
   end
 
   def create
-    require 'pry'
-    binding.pry
     @new_recipe = Recipe.create(recipe_params)
     if(params[:recipe_ingredients])
       params[:recipe_ingredients].each do |ri|

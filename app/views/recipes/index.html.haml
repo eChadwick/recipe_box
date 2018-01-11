@@ -1,7 +1,7 @@
 .card.recipe_list
   .title
     Recipes
-    =link_to image_tag('add_button.png', class: 'add_button'), '/recipes/new'
+    =link_to image_tag('add_button.png', class: 'add_recipe'), '/recipes/new'
   .body
     %table
       -@recipes.each do |recipe|

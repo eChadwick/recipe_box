@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* Styles for Recipe show */
-
 .recipe_card {
   height: 80%;
   width: 90%;
@@ -38,32 +36,21 @@
   color: #3d3d3d;
 }
 
- .recipe_card .delete_button {
+.square_nav_button img {
+  width: 68px;
+  height: auto;
+  padding-top: 2px;
+  padding-right: 2px;
   float: right;
 }
 
-
-.recipe_card .delete_button img {
-  width: 28%;
+.circular_nav_button img {
+  width: 70px;
   height: auto;
-  padding-top: 3%;
-  padding-right: 2%;
-  float: right;
-}
-
-.recipe_card .back_button {
+  padding-top: 2px;
+  padding-left: 2px;
   float: left;
 }
-
-.recipe_card .back_button img {
-  width: 28%;
-  height: auto;
-  padding-top: 3%;
-  padding-left: 2%;
-  float: left;
-}
-
-/* Styles for Recipe List */
 
 .recipe_list {
   height: 100%;
@@ -72,16 +59,15 @@
   position: absolute;
 }
 
-.recipe_list .delete_button {
-  float: right;
+.recipe_list .body {
+  overflow: auto;
 }
 
 .recipe_list .delete_button img {
-  width: 20%;
+  width: 45px;
   height: auto;
-  padding-top: 1%;
-  padding-right: 2%;
   float: right;
+  padding-top: 3px;
 }
 
 .recipe_name {
@@ -104,16 +90,29 @@ table {
   background-color: #ede2cb;
 }
 
-/* Styles for Recipe Create */
-
-.add_button {
-  width: 5%;
+.add_recipe {
+  width: 45px;
   height: auto;
   padding-left: 10px;
 }
 
-.remove_button {
-  width: 5%;
+.add_recipe_element {
+  width: 25px;
+  height: auto;
+  padding-left: 10px;
+}
+
+.remove_recipe_element {
+  width: 18px;
   height: auto;
   padding-left: 5px;
 }
+
+/*.new_recipe_name {
+  width: 100%;
+}
+
+.new_recipe_name input {
+  display: none;
+}
+*/

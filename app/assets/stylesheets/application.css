@@ -27,9 +27,16 @@ body {
   font-family: 'Indie Flower', cursive;
 }
 
-input {
+input[type=text] {
   background: #fffef2;
   border: none;
+  outline: none;
+  autocomplete: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+form {
+  auto-complete: "off";
 }
 
 .card {
@@ -51,9 +58,19 @@ input {
   position: relative;
 }
 
+.title input {
+  font-size: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
 .body {
   position: relative;
   height: 100%;
+}
+
+.body input {
+  font-size: 100%;
 }
 
 .col_header {

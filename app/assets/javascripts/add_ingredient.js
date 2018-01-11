@@ -4,14 +4,18 @@ function addIngredient(){
   var ingredient = document.createElement("input");
   ingredient.placeholder = "Ingredient";
   ingredient.name = "[recipe_ingredients][][ingredient]";
+  ingredient.autocomplete = "off";
+  ingredient.type = "text";
 
   var measurement = document.createElement("input");
   measurement.placeholder = "Measurement";
   measurement.name = "[recipe_ingredients][][measurement]";
+  measurement.autocomplete = "off";
+  measurement.type = "text";
 
   var remove_button = document.createElement("img");
   remove_button.src = "/assets/remove-button.png";
-  remove_button.className = "remove_button";
+  remove_button.className = "remove_recipe_element";
   remove_button.onclick = function() {
     var target = this.parentElement;
     target.parentElement.removeChild(target);
