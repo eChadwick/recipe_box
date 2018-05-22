@@ -1,0 +1,20 @@
+.card.recipe_card
+  = form_for(@recipe, url: recipes_path) do |recipe|
+    .title
+      =link_to image_tag('Back-Button.png'), "/recipe/#{@recipe.id}", {method: :get, class: 'circular_nav_button'}
+      =link_to image_tag('save-button.png'), "/recipe/#{@recipe.id}", {method: :put, class: 'square_nav_button'}
+      =recipe.text_field :name, placeholder: @recipe.name
+    .body
+      .ingredients_pane
+        %table
+          .col_header
+            Ingredients
+
+      .directions_pane
+        %table
+          .col_header Directions
+          %ul
+            -@recipe.directions.each do |direction|
+              %li=recipe.text_field :directions, value: direction
+
+

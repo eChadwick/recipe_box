@@ -27,6 +27,15 @@ class RecipesController < ApplicationController
     redirect_to "/recipe/#{@new_recipe.id}" unless !@new_recipe.save
   end
 
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def update
+    # binding.pry
+    redirect_to "/recipe/#{params[:id]}"
+  end
+
   private
 
     def recipe_params
