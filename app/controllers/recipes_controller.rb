@@ -32,7 +32,6 @@ class RecipesController < ApplicationController
   end
 
   def update
-    # binding.pry
     redirect_to "/recipe/#{params[:id]}"
   end
 
