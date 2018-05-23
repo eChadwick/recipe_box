@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # resources :recipes
-  # resources :recipe
+  root 'recipes#index'
   get '/recipes' => 'recipes#index'
   get '/recipe/:id' => 'recipes#show'
   delete '/recipe/:id' => 'recipes#delete'
