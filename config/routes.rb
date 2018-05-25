@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   root 'recipes#index'
+
   get '/recipes' => 'recipes#index'
   get '/recipe/:id' => 'recipes#show'
+
   delete '/recipe/:id' => 'recipes#delete'
+
   get 'recipes/new' => 'recipes#new'
   post 'recipes' => 'recipes#create'
+
   get 'recipe/:id/edit' => 'recipes#edit'
-  put 'recipe/:id' => 'recipes#update'
+  put 'recipe/:id/edit' => 'recipes#update'
 
   get '/ingredients' => 'ingredients#index'
 
