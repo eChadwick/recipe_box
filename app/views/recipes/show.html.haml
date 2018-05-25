@@ -1,9 +1,9 @@
 .card.recipe_card
   .title
-    =link_to image_tag("Back-Button.png"), "/recipes", {method: :get, class: 'circular_nav_button'}
+    =link_to image_tag("Back-Button.png"), recipes_path, {method: :get, class: 'circular_nav_button'}
     =@recipe.name
-    =link_to 'edit', "#{@recipe.id}/edit"
-    =link_to image_tag("delete-button.png"), "/recipe/#{@recipe.id}", {method: :delete, class: 'square_nav_button', data:{confirm: "Are you sure you want to delete #{@recipe.name}"}}
+    =link_to 'edit', edit_recipe_path(@recipe.id)
+    =link_to image_tag("delete-button.png"), recipe_path(@recipe.id), {method: :delete, class: 'square_nav_button', data:{confirm: "Are you sure you want to delete #{@recipe.name}"}}
   .body
     .ingredients_pane
       %table

@@ -3,7 +3,7 @@
 .card.recipe_card
   =form_for(@new_recipe) do |recipe|
     .title
-      =link_to image_tag('Back-Button.png'), '/recipes', {method: :get, class: 'circular_nav_button'}
+      =link_to image_tag('Back-Button.png'), recipes_path, {method: :get, class: 'circular_nav_button'}
       =link_to image_tag('save-button.png'), '', class: 'square_nav_button', onclick: "document.getElementById('new_recipe').submit()"
       =recipe.text_field :name, placeholder: 'Recipe Name', class: 'new_recipe_name', autocomplete: 'off'
     .body

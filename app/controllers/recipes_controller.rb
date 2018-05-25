@@ -7,9 +7,9 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
-  def delete
+  def destroy
     Recipe.destroy(params[:id])
-    redirect_to '/recipes'
+    redirect_to recipes_path
   end
 
   def new
@@ -24,7 +24,7 @@ class RecipesController < ApplicationController
         @new_recipe.recipe_ingredients.build(ingredient: @ingredient, measurement: ri['measurement'])
       end
     end
-    redirect_to "/recipe/#{@new_recipe.id}" unless !@new_recipe.save
+    redirect_to recipes_path(@new_recipe.id) unless !@new_recipe.save
   end
 
   def edit
@@ -32,9 +32,8 @@ class RecipesController < ApplicationController
   end
 
   def update
-    binding.pry
     Recipe.update(params[:id], recipe_params)
-    redirect_to "/recipe/#{params[:id]}"
+    redirect_to recipes_path(params[:id]), method: :get
   end
 
   private
