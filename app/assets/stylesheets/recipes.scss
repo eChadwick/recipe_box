@@ -57,10 +57,7 @@
   width: 60%;
   margin-left: 20%;
   position: absolute;
-}
-
-.recipe_list .body {
-  overflow: auto;
+  overflow: scroll;
 }
 
 .recipe_list .delete_button img {
