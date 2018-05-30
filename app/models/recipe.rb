@@ -9,5 +9,4 @@ class Recipe < ActiveRecord::Base
   accepts_nested_attributes_for :ingredients
 
   serialize :directions, Array
-
 end
