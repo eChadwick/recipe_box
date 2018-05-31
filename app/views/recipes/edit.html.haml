@@ -1,23 +1,29 @@
 .card.recipe_card
-  = form_for(@recipe, url: '#', method: :put) do |recipe|
+  = form_for(@recipe, url: recipe_path) do |recipe|
     .title
-      =link_to image_tag('Back-Button.png'), "/recipe/#{@recipe.id}", {method: :get, class: 'circular_nav_button'}
+      =link_to image_tag('Back-Button.png'), recipe_path, {method: :get, class: 'circular_nav_button'}
       =link_to image_tag('save-button.png'), '', {class: 'square_nav_button', onclick: "document.getElementById('edit_recipe_#{@recipe.id}').submit()"}
       =recipe.text_field :name
     .body
       .ingredients_pane
         %table
-          .col_header Ingredients
-          -@recipe.recipe_ingredients.each do |ingredient|
-            %tr
-              =recipe.fields_for :recipe_ingredients do |ingredient_field|
-                %td=ingredient_field.text_field :ingredient, value: ingredient.ingredient.name
-                %td=ingredient_field.text_field :measurement, value: ingredient.measurement
+          .col_header
+            Ingredients
+            / # =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addIngredient(); return false;')
+          %tb{id: 'ingredients_list'}
+            =recipe.fields_for :recipe_ingredients do |ingredient_field|
+              -@recipe.recipe_ingredients.each do |ingredient|
+                %tr
+                  %td=ingredient_field.text_field :ingredient, value: ingredient.ingredient.name
+                  %td=ingredient_field.text_field :measurement, value: ingredient.measurement
       .directions_pane
         %table
-          .col_header Directions
-          %ul
-            -@recipe.directions.each do |direction|
-              %li=recipe.text_field :directions, multiple: true, value: direction
+          .col_header
+            Directions
+            / # =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addDirection(); return false;')
+          %tb{id: 'directions_list'}
+            %ul
+              -@recipe.directions.each do |direction|
+                %li=recipe.text_field :directions, multiple: true, value: direction
 
 
