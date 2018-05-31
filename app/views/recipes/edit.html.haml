@@ -11,11 +11,11 @@
             Ingredients
             / # =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addIngredient(); return false;')
           %tb{id: 'ingredients_list'}
-            =recipe.fields_for :recipe_ingredients do |ingredient_field|
-              -@recipe.recipe_ingredients.each do |ingredient|
-                %tr
-                  %td=ingredient_field.text_field :ingredient, value: ingredient.ingredient.name
-                  %td=ingredient_field.text_field :measurement, value: ingredient.measurement
+            =recipe.fields_for :recipe_ingredients do |recipe_ingredient|
+              %tr
+                =recipe_ingredient.fields_for :ingredient do |ingredient|
+                  %td=ingredient.text_field :name
+                %td=recipe_ingredient.text_field :measurement
       .directions_pane
         %table
           .col_header
