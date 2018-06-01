@@ -27,12 +27,13 @@ class RecipesController < ApplicationController
 
   def update
     Recipe.update(params[:id], recipe_params)
-    redirect_to recipes_path(params[:id]), method: :get
+    redirect_to recipe_path(params[:id]), method: :get
   end
 
   private
 
     def recipe_params
+      params[:recipe][:directions] ||= []
       params.require(:recipe).permit!
     end
 end

@@ -10,7 +10,7 @@
           .col_header
             Ingredients
             / # =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addIngredient(); return false;')
-          %tb{id: 'ingredients_list'}
+          %tbody{id: 'ingredients_list'}
             =recipe.fields_for :recipe_ingredients do |recipe_ingredient|
               %tr
                 =recipe_ingredient.fields_for :ingredient do |ingredient|
@@ -20,10 +20,11 @@
         %table
           .col_header
             Directions
-            / # =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addDirection(); return false;')
-          %tb{id: 'directions_list'}
-            %ul
-              -@recipe.directions.each do |direction|
-                %li=recipe.text_field :directions, multiple: true, value: direction
-
-
+            =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addDirection(); return false;')
+          %tbody{id: 'directions_list'}
+            / # %tr=recipe.text_field :directions, multiple: true, value: nil, hidden: true
+            -@recipe.directions.each do |direction|
+              %tr
+                %td
+                  =recipe.text_field :directions, multiple: true, value: direction
+                  =link_to image_tag('remove-button.png', class: 'remove_recipe_element'), '', onclick: "document.getElementById('directions_list').removeChild(this.parentElement.parentElement); return false;"
