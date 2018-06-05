@@ -9,20 +9,19 @@
         %table
           .col_header
             Ingredients
-            / # =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addIngredient(); return false;')
+            =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addIngredient(); return false;')
           %tbody{id: 'ingredients_list'}
             =recipe.fields_for :recipe_ingredients do |recipe_ingredient|
               %tr
                 =recipe_ingredient.fields_for :ingredient do |ingredient|
-                  %td=ingredient.text_field :name
-                %td=recipe_ingredient.text_field :measurement
+                  =ingredient.text_field :name
+                =recipe_ingredient.text_field :measurement
       .directions_pane
         %table
           .col_header
             Directions
             =link_to image_tag('add_button.png', class: 'add_recipe_element', onclick: 'javascript:addDirection(); return false;')
           %tbody{id: 'directions_list'}
-            / # %tr=recipe.text_field :directions, multiple: true, value: nil, hidden: true
             -@recipe.directions.each do |direction|
               %tr
                 %td

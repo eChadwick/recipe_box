@@ -3,13 +3,13 @@ function addIngredient(){
 
   var ingredient = document.createElement("input");
   ingredient.placeholder = "Ingredient";
-  ingredient.name = "recipe[recipe_ingredients_attributes][][ingredient_attributes][name]";
+  ingredient.name = "recipe[recipe_ingredients_attributes][" + id + "][ingredient_attributes][name]";
   ingredient.autocomplete = "off";
   ingredient.type = "text";
 
   var measurement = document.createElement("input");
   measurement.placeholder = "Measurement";
-  measurement.name = "recipe[recipe_ingredients_attributes][][measurement]";
+  measurement.name = "recipe[recipe_ingredients_attributes][" + id + "][measurement]";
   measurement.autocomplete = "off";
   measurement.type = "text";
 
