@@ -13,9 +13,12 @@
           %tbody{id: 'ingredients_list'}
             =recipe.fields_for :recipe_ingredients do |recipe_ingredient|
               %tr
-                =recipe_ingredient.fields_for :ingredient do |ingredient|
-                  =ingredient.text_field :name
-                =recipe_ingredient.text_field :measurement
+                %td
+                  =recipe_ingredient.hidden_field :id
+                  =recipe_ingredient.fields_for :ingredient do |ingredient|
+                    =ingredient.text_field :name
+                  =recipe_ingredient.text_field :measurement
+                  =link_to image_tag('remove-button.png', class: 'remove_recipe_element'), '', onclick: "removeExistingIngredient(this, #{recipe_ingredient.object.id}); return false;"
       .directions_pane
         %table
           .col_header
@@ -26,4 +29,4 @@
               %tr
                 %td
                   =recipe.text_field :directions, multiple: true, value: direction
-                  =link_to image_tag('remove-button.png', class: 'remove_recipe_element'), '', onclick: "document.getElementById('directions_list').removeChild(this.parentElement.parentElement); return false;"
+                  =link_to image_tag('remove-button.png', class: 'remove_recipe_element'), '', onclick: 'removeExistingDirection(this); return false;'

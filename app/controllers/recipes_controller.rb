@@ -26,6 +26,9 @@ class RecipesController < ApplicationController
   end
 
   def update
+    params[:deleted_ingredients]&.each do |id|
+      RecipeIngredient.delete(id)
+    end
     Recipe.update(params[:id], recipe_params)
     redirect_to recipe_path(params[:id]), method: :get
   end
