@@ -18,7 +18,8 @@ class RecipesController < ApplicationController
 
   def create
     @new_recipe = Recipe.create(recipe_params)
-    redirect_to recipes_path(@new_recipe.id) unless !@new_recipe.save
+    redirect_to recipes_path(@new_recipe.id) if @new_recipe.valid?
+    binding.pry
   end
 
   def edit
