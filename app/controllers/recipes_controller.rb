@@ -13,13 +13,12 @@ class RecipesController < ApplicationController
   end
 
   def new
-    @new_recipe = Recipe.new
+    @recipe = Recipe.new
   end
 
   def create
-    @new_recipe = Recipe.create(recipe_params)
-    redirect_to recipes_path(@new_recipe.id) if @new_recipe.valid?
-    binding.pry
+    @recipe = Recipe.create(recipe_params)
+    redirect_to recipes_path(@recipe.id) if @recipe.valid?
   end
 
   def edit
