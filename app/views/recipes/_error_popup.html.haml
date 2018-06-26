@@ -1,0 +1,5 @@
+.errors
+  %ul
+    =image_tag 'remove-button', class: 'close_error_popup', onclick: 'this.parentElement.parentElement.style.display = "none"'
+    -flash[:errors].each do |error|
+      %li=error

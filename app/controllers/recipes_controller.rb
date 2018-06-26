@@ -18,7 +18,12 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
-    redirect_to recipes_path(@recipe.id) if @recipe.valid?
+    if @recipe.valid?
+      redirect_to recipes_path(@recipe.id)
+    else
+      populate_flash_errors
+      render :new
+    end
   end
 
   def edit
@@ -34,6 +39,15 @@ class RecipesController < ApplicationController
   end
 
   private
+
+    # Copies error messages from @recipe to session flash so they can be displayed in a view
+    def populate_flash_errors
+      flash[:errors] = []
+      @recipe.errors.values.each do |error|
+        flash[:errors] << error
+      end
+      flash[:errors].flatten!
+    end
 
     def recipe_params
       params[:recipe][:directions] ||= []

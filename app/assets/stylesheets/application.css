@@ -41,7 +41,7 @@ form {
 
 .card {
   background: #fffef2;
-  position: relative;
+  position: absolute;
   box-shadow: 5px 5px 10px;
   border-left: 2px solid black;
   border-top: 1px solid black;
@@ -79,6 +79,18 @@ form {
   text-align: left;
   padding-bottom: 20px;
   font-weight: normal;
+}
+
+.errors {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  border: thick solid #cc0000;
+  border-radius: 15px;
+  background-color: white;
+  font-size: 150%;
+  z-index: 2;
 }
 
 table th {

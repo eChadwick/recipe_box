@@ -1,2 +1,4 @@
 .card.recipe_card
+  =render 'error_popup' if flash[:errors]
   =render 'form', url: recipes_path
+  -flash.clear
