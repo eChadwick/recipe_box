@@ -34,8 +34,17 @@ class RecipesController < ApplicationController
     params[:deleted_ingredients]&.each do |id|
       RecipeIngredient.delete(id)
     end
-    Recipe.update(params[:id], recipe_params)
-    redirect_to recipe_path(params[:id]), method: :get
+
+    @recipe = Recipe.find(params[:id])
+    @recipe.attributes = recipe_params
+
+    if @recipe.valid?
+      @recipe.save
+      redirect_to recipes_path(@recipe.id)
+    else
+      populate_flash_errors
+      render :edit
+    end
   end
 
   private
