@@ -1,6 +1,8 @@
 =form_for(@recipe, url: url) do |recipe|
   .title
     =recipe.text_field :name, placeholder: 'Recipe Name'
+    .interaction_menu
+      =image_submit_tag 'save-button.png', class: 'square_nav_button'
   .body
     .ingredients_pane
       %table
@@ -27,4 +29,3 @@
               %td
                 =recipe.text_field :directions, multiple: true, value: direction
                 =link_to image_tag('remove-button.png', class: 'remove_recipe_element'), '', onclick: 'removeExistingDirection(this); return false;'
-    =recipe.submit

@@ -36,12 +36,24 @@
   color: #3d3d3d;
 }
 
+.interaction_menu {
+  float: right;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+
+/* For all other square nav buttons */
 .square_nav_button img {
   width: 68px;
   height: auto;
-  padding-top: 2px;
-  padding-right: 2px;
-  float: right;
+  float: left;
+}
+
+/* For save button on Recipe form */
+.square_nav_button {
+  width: 68px;
+  height: auto;
+  float: left;
 }
 
 .circular_nav_button img {
