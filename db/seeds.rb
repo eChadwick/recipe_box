@@ -16,3 +16,6 @@ RecipeIngredient.create([{recipe_id: 1, ingredient_id: 1, measurement: 'One glas
 RecipeIngredient.create([{recipe_id: 2, ingredient_id: 2, measurement: 'A few pieces'}, {recipe_id: 2, ingredient_id: 4,
   measurement: '2 Tbs'}])
 
+for i in 1..20 do
+  Recipe.create(name: "Scroll Test #{i}", directions: ['just need something in this space.'])
+end
