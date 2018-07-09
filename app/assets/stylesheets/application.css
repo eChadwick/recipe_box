@@ -93,6 +93,10 @@ form {
   z-index: 2;
 }
 
+.field_with_errors {
+  display: inline;
+}
+
 table th {
   padding-bottom: 5%;
 }
