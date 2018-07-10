@@ -2,6 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+  height: 100%;
+}
+
+body {
+  background: dark-blue;
+  background: url("Butcher-Block.jpg");
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Indie Flower', cursive;
+}
+
+table {
+  width: 100%;
+  display: block;
+}
+
+table th {
+  padding-bottom: 5%;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 0;
+  color: black
+} a:hover {
+  color: grey;
+}
+
+
+input[type=text] {
+  background: #fffef2;
+  border: none;
+  outline: none;
+  autocomplete: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+form {
+  auto-complete: "off";
+}
+
 .recipe_card {
   height: 80%;
   width: 90%;
@@ -90,10 +132,6 @@
   padding-left: 2%;
 }
 
-table {
-  width: 100%;
-}
-
 .recipe_list tr:nth-child(even){
   background-color: #ede2cb;
 }
@@ -125,3 +163,62 @@ table {
   top: -15px;
 }
 
+.card {
+  background: #fffef2;
+  position: absolute;
+  box-shadow: 5px 5px 10px;
+  border-left: 2px solid black;
+  border-top: 1px solid black;
+}
+
+.title {
+  text-align: center;
+  font-size: 300%;
+  font-weight: bold;
+  border-bottom: thin solid black;
+  margin-bottom: 5px;
+  width: 100%;
+  background: #fffef2;
+  position: relative;
+}
+
+.title input {
+  font-size: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.body {
+  position: relative;
+  height: 100%;
+  display: block;
+  overflow: scroll;
+}
+
+.body input {
+  font-size: 100%;
+}
+
+.col_header {
+  font-size: 150%;
+  font-style: italic;
+  text-align: left;
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+
+.errors {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  border: thick solid #cc0000;
+  border-radius: 15px;
+  background-color: white;
+  font-size: 150%;
+  z-index: 2;
+}
+
+.field_with_errors {
+  display: inline;
+}
