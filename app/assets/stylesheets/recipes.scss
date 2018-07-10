@@ -70,14 +70,6 @@ form {
   display: inline;
 }
 
-.recipe_list_button a {
-  font-size: 300%;
-  float: right;
-  padding-right: 5%;
-  font-weight: bold;
-  color: #3d3d3d;
-}
-
 .interaction_menu {
   float: right;
   padding-right: 2px;
@@ -106,14 +98,15 @@ form {
   float: left;
 }
 
-.recipe_list {
+.list_card {
   height: 100%;
   width: 60%;
   margin-left: 20%;
   position: absolute;
+  padding-right: 2px;
 }
 
-.recipe_list .delete_button img {
+.list_card .delete_button img {
   width: 45px;
   height: auto;
   float: right;
@@ -130,10 +123,6 @@ form {
 
 .recipe_name a {
   padding-left: 2%;
-}
-
-.recipe_list tr:nth-child(even){
-  background-color: #ede2cb;
 }
 
 .add_recipe {
@@ -188,11 +177,13 @@ form {
   font-weight: bold;
 }
 
-.body {
-  position: relative;
+.recipe_list {
   height: 100%;
-  display: block;
   overflow: scroll;
+}
+
+.recipe_list div:nth-child(2n) {
+  background-color: #ede2cb;
 }
 
 .body input {
