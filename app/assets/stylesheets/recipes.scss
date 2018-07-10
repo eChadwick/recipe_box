@@ -168,7 +168,6 @@ form {
   margin-bottom: 5px;
   width: 100%;
   background: #fffef2;
-  position: relative;
 }
 
 .title input {
@@ -184,10 +183,6 @@ form {
 
 .recipe_list div:nth-child(2n) {
   background-color: #ede2cb;
-}
-
-.body input {
-  font-size: 100%;
 }
 
 .col_header {
