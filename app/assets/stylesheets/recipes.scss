@@ -104,6 +104,8 @@ form {
   margin-left: 20%;
   position: absolute;
   padding-right: 2px;
+  display: flex;
+  flex-direction:column;
 }
 
 .list_card .delete_button img {
@@ -207,4 +209,8 @@ form {
 
 .field_with_errors {
   display: inline;
+}
+
+.list_buffer {
+  height: 20px;
 }
