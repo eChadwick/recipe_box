@@ -70,12 +70,6 @@ form {
   display: inline;
 }
 
-.interaction_menu {
-  float: right;
-  padding-right: 2px;
-  padding-top: 2px;
-}
-
 /* For all other square nav buttons */
 .square_nav_button img {
   width: 68px;
@@ -162,6 +156,13 @@ form {
   border-top: 1px solid black;
 }
 
+.interaction_menu {
+  display: flex;
+  float: right;
+  padding-right: 4px;
+  padding-top: 5px;
+}
+
 .title {
   text-align: center;
   font-size: 300%;
@@ -172,7 +173,7 @@ form {
   background: #fffef2;
 }
 
-.title input {
+.title input[type=text] {
   font-size: 100%;
   text-align: center;
   font-weight: bold;

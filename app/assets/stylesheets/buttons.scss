@@ -1,0 +1,75 @@
+.save_button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+  box-shadow:inset 0px 1px 0px 0px #caefab;
+  background-color:#77d42a;
+  -webkit-border-top-left-radius:20px;
+  -moz-border-radius-topleft:20px;
+  border-top-left-radius:20px;
+  -webkit-border-top-right-radius:20px;
+  -moz-border-radius-topright:20px;
+  border-top-right-radius:20px;
+  -webkit-border-bottom-right-radius:20px;
+  -moz-border-radius-bottomright:20px;
+  border-bottom-right-radius:20px;
+  -webkit-border-bottom-left-radius:20px;
+  -moz-border-radius-bottomleft:20px;
+  border-bottom-left-radius:20px;
+  text-indent:0;
+  border:1px solid #268a16;
+  display:inline-block;
+  color:#306108;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:67px;
+  line-height:67px;
+  width:98px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #aade7c;
+  margin-right: 4px;
+}.save_button:hover {
+  background-color:#5cb811;
+}.save_button:active {
+  position:relative;
+  top:1px;
+}
+
+.cancel_button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  background-color:#79bbff;
+  -webkit-border-top-left-radius:20px;
+  -moz-border-radius-topleft:20px;
+  border-top-left-radius:20px;
+  -webkit-border-top-right-radius:20px;
+  -moz-border-radius-topright:20px;
+  border-top-right-radius:20px;
+  -webkit-border-bottom-right-radius:20px;
+  -moz-border-radius-bottomright:20px;
+  border-bottom-right-radius:20px;
+  -webkit-border-bottom-left-radius:20px;
+  -moz-border-radius-bottomleft:20px;
+  border-bottom-left-radius:20px;
+  text-indent:0;
+  border:1px solid #469df5;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:65px;
+  line-height:67px;
+  width:98px;
+  text-decoration:none;
+  text-align:center;
+}.cancel_button:hover {
+  background-color:#4197ee;
+}.cancel_button:active {
+  position:relative;
+  top:1px;
+}

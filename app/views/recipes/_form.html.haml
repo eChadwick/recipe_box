@@ -2,8 +2,8 @@
   .title
     =recipe.text_field :name, placeholder: 'Recipe Name'
     .interaction_menu
-      =link_to image_tag('cancel-button.jpg'), generate_cancel_path, class: 'square_nav_button'
-      =image_submit_tag 'save-button.png', class: 'square_nav_button'
+      =submit_tag 'save', class: 'save_button'
+      =link_to 'cancel', generate_cancel_path, class: 'cancel_button'
   .body
     .ingredients_pane
       %table
