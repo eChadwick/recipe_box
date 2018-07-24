@@ -16,7 +16,7 @@
               %td
                 =recipe_ingredient.hidden_field :id
                 =recipe_ingredient.fields_for :ingredient do |ingredient|
-                  =ingredient.text_field :name
+                  =ingredient.text_field :name, readonly: true
                 =recipe_ingredient.text_field :measurement
                 =link_to image_tag('remove-button.png', class: 'remove_recipe_element'), '', onclick: "removeExistingIngredient(this, #{recipe_ingredient.object.id}); return false;"
     .directions_pane
