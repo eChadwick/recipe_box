@@ -38,6 +38,11 @@ input[type=text] {
   outline: none;
   autocomplete: none;
   font-family: 'Indie Flower', cursive;
+  color: silver;
+}
+
+input[type=text]:read-only {
+  color: black;
 }
 
 form {
