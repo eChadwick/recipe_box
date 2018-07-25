@@ -1,5 +1,7 @@
 .card.recipe_card
   .title
+    .nav_menu
+      =link_to "Recipes".html_safe, recipes_path, class: 'recipe_list_button'
     =@recipe.name
     .interaction_menu
       =link_to 'Edit', edit_recipe_path(@recipe.id), class: 'edit_button'

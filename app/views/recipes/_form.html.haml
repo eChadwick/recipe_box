@@ -1,5 +1,7 @@
 =form_for(@recipe, url: url) do |recipe|
   .title
+    .nav_menu
+      =link_to "Recipes".html_safe, recipes_path, class: 'recipe_list_button'
     =recipe.text_field :name, placeholder: 'Recipe Name'
     .interaction_menu
       =submit_tag 'Save', class: 'save_button'
