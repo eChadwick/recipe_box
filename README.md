@@ -22,7 +22,7 @@ The following steps will allow you to run the app on your local machine:
 1. Install dependencies:<br>
 `bundle install`
 1. Create and seed the local database:<br>
-`rake db:create db:seed`
+`rake db:create db:schema:load db:seed`
 1. Spin up a Rails server:<br>
 `rails s`
 1. Navigate to `localhost:3000` in a web browser.
